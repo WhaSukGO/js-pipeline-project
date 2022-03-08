@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+    environment {
+        CURRENT_VERSION = '1.0.0'
+    }
 	stages {
 		stage("build") {
             when {
@@ -9,6 +12,7 @@ pipeline {
             }
 			steps {
 				echo 'building the applicaiton...'
+                echo "Current version $(NEW_VERSION)"
 			}
 		}
 		stage("test") {
