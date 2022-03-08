@@ -17,4 +17,15 @@ pipeline {
 			}
 		}
 	}
+    post {
+        always{
+            echo "building ..."
+        }
+        success {
+            echo "Success!"
+        }
+        failture {
+            echo "Failed!"
+        }
+    }
 }
