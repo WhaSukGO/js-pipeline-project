@@ -12,7 +12,7 @@ pipeline {
             }
 			steps {
 				echo 'building the applicaiton...'
-                echo "Current version $(NEW_VERSION)"
+                echo "Current version ${CURRENT_VERSION}"
 			}
 		}
 		stage("test") {
