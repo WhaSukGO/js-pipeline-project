@@ -19,7 +19,9 @@ pipeline {
                                     credentialsId: 'admin_user_credentials',
                                     usernameVariable: 'USER',
                                     passwordVariable: 'PWD']])
+            {
                 echo "Credential used ${USER}"
+            }
 			}
 		}
 		stage("test") {
