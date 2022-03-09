@@ -2,6 +2,7 @@ pipeline {
 	agent any
     environment {
         CURRENT_VERSION = '1.0.0'
+        ADMIN_CREDENTIALS = credentials('admin_user_credentials')
     }
 	stages {
 		stage("build") {
@@ -13,6 +14,7 @@ pipeline {
 			steps {
 				echo 'building the applicaiton...'
                 echo "Current version ${CURRENT_VERSION}"
+                echo "Credential used ${ADMIN_CREDENTIALS}"
 			}
 		}
 		stage("test") {
