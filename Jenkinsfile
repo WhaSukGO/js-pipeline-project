@@ -13,7 +13,8 @@ pipeline {
 		stage("build") {
             when {
                 expression {
-                    env.GIT_BRANCH == 'origin/main'
+                    // env.GIT_BRANCH == 'origin/main'
+                    params.executeTests
                 }
             }
 			steps {
